@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    @Named("Firebase")
     @Inject
     lateinit var userRepository: UserRepository
     override fun onCreate(savedInstanceState: Bundle?) {

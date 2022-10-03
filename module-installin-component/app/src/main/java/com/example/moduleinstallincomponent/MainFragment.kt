@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 /**
  * If you annotate an Android class with @AndroidEntryPoint,
@@ -16,6 +17,7 @@ import javax.inject.Inject
 class MainFragment : Fragment() {
     //Once dependent activity's super.onCreate() will be called
     // required dependencies will be injected
+    @SQLQualifier
     @Inject
     lateinit var userRepository: UserRepository
 
